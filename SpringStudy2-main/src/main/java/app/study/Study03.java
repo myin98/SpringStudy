@@ -18,11 +18,9 @@ public class Study03 {
 	public String quest(Model model) {
 		model.addAttribute("key", "나");
 		model.addAttribute("a", "다");
-		
-		model.addAttribute("array", new String[] {"가","나","다"});
+		model.addAttribute("array", new String[] {"가", "나", "다"});
 		model.addAttribute("s", 1);
 		model.addAttribute("e", 9);
-		
 		return "study/s3/quest";
 	}
 	

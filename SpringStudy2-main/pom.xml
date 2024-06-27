@@ -10,9 +10,41 @@
 	<encoding-type>UTF-8</encoding-type>
 	<java-version>11</java-version>
 	<org.springframework-version>5.3.36</org.springframework-version>
+	
+	<org.slf4j-version>1.6.6</org.slf4j-version>
   </properties>
 
   <dependencies>
+	
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>${org.slf4j-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>jcl-over-slf4j</artifactId>
+		<version>${org.slf4j-version}</version>
+		<scope>runtime</scope>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>${org.slf4j-version}</version>
+		<scope>runtime</scope>
+	</dependency>
+	<dependency>
+	  <groupId>ch.qos.logback</groupId>
+	  <artifactId>logback-classic</artifactId>
+	  <version>1.2.3</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.32</version>
+	    <scope>provided</scope>
+	</dependency>
 	
 	<!-- Servlet -->
 	<dependency>

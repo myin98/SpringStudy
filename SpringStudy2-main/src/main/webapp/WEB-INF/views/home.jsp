@@ -9,7 +9,7 @@
 .text-center {text-align: center;}
 .text-start {text-align: left;}
 .body {display: flex; justify-content: center;}
-.in-box {width: 30vw;}
+.in-box {width: 40vw;}
 .in-box li:hover {background-color: #d3e3fd; cursor: pointer;}
 a {text-decoration: none; color: #000; font-size: 1.5rem;}
 </style>
@@ -28,7 +28,13 @@ a {text-decoration: none; color: #000; font-size: 1.5rem;}
 			<a href="/s3">JSTL 데이터 제어하기</a>
 		</li>
 		<li>
-			<a href="/s4">경로 변수 이용하여 페이지 출력하기</a>
+			<a href="/s4/data/홍길동/18">경로 변수 이용하여 페이지 출력하기</a>
+		</li>
+		<li>
+			<a href="/s5">경로 변수에 조건를 넣어서 데이터 가져오기</a>
+		</li>
+		<li>
+			<a href="/s6">스프링 Service 기능 나누기</a>
 		</li>
 	</ol>
 </div>

@@ -7,10 +7,10 @@
 <title>QUEST</title>
 </head>
 <body>
-
 ${map}
 <%-- <h1>${map.getClass().getName()}</h1>
 <h1>${map.getClass().getName()}</h1> --%>
+<h1>전달 받은 Map 객체 받아오기</h1>
 <h1>Name: ${linkedHashMap.name}</h1>
 <h1>Age: ${linkedHashMap.age}</h1>
 

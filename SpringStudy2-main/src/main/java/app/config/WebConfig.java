@@ -2,9 +2,8 @@ package app.config;
 
 import javax.servlet.Filter;
 
+import org.springframework.lang.Nullable;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-
 
 public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -22,8 +21,9 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 	protected String[] getServletMappings() {
 		return new String[] {"/"};  // URL 패턴 등록
 	}
-	
+
 	@Override
+	@Nullable
 	protected Filter[] getServletFilters() {
 		return new Filter[] {new UTF8Filter()};
 	}

@@ -7,6 +7,7 @@
 <title>QUEST</title>
 </head>
 <body>
+
 <!-- 변수 선언 및 할당 -->
 <%-- <c:set scope="request" var="a" value="${key}" /> --%>
 <p>${a}</p>
@@ -23,10 +24,10 @@
 
 
 <!-- 조건문 2 -->
-<c:choose> 
-	<c:when test="${a == '나'}">a 값이 '나'이면 실행</c:when> 
+<c:choose>
+	<c:when test="${a == '나'}">a 값이 '나'이면 실행</c:when>
 	<c:when test="${a eq '다'}">a 값이 '다'이면 실행</c:when>
-	<c:otherwise>a 값이 '나', '다' 값이 아닐 경우 실행</c:otherwise> 
+	<c:otherwise>a 값이 '나', '다' 값이 아닐 경우 실행</c:otherwise>
 </c:choose>
 
 
@@ -44,17 +45,20 @@
 </c:forEach>
 </ul>
 
-<hr>
-<a>구구단</a>
-<c:forEach var="row1" begin="${s}" end="${e}" step="1">
+
+<ul>
+<c:forEach var="row" begin="${s}" end="${e}" step="1" varStatus="s">
+	<li>${row} * ${s.index} = ${row * s.index}</li>
+</c:forEach>
+</ul>
+
+<c:forEach var="row1" begin="${s}" end="${e}" step="1" varStatus="s1">
 	<ul>
-	<c:forEach var="row2" begin="${s}" end="${e}" step="1">
-		<li> ${row1} * ${row2} = ${row1 * row2}</li>
+	<c:forEach var="row2" begin="${s}" end="${e}" step="1" varStatus="s2">
+		<li>${row1} * ${row2} = ${row1 * row2}</li>
 	</c:forEach>
 	</ul>
-	<hr>
 </c:forEach>
-
 
 </body>
 </html>
