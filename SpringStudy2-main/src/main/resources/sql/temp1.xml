@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="temp1">
+    
+    <select id="findlist" parameterType="Object" resultType="HashMap">
+    	SELECT * FROM temp1 
+    	<if test="accept == 1">
+    		WHERE accept = 1
+    	</if>
+    	<if test="accept == 0">
+    		WHERE accept = 0
+    	</if>
+    </select>
+    
+    <select id="findone" parameterType="Integer" resultType="HashMap">
+    	SELECT * From temp1 WHERE no = ${no}
+    
+    </select>
+    
+    <update id="edit" parameterType="HashMap">
+    	UPDATE temp1 SET 
+    		title = #{title},
+    		content = #{content}
+    	WHERE no = #{no}
+    </update>
+    
+        <update id="editaccept" parameterType="HashMap">
+    	UPDATE temp1 SET 
+    		accept = #{accept}
+    	WHERE no = #{no}
+    </update>
+    
+    <insert id="save" parameterType="HashMap">
+    	INSERT INTO temp1
+    		(title, content)
+    	VALUE
+    		(#{title}, #{content})
+   <selectKey keyProperty="no" order="AFTER" resultType="Integer">
+   		SELECT LAST_INSERT_ID() as no
+   </selectKey> 		
+   
+    </insert>
+    
+    <select id="findno" resultType="Integer">
+    	SELECT LAST_INSERT_ID() as no
+    </select>
+</mapper>
